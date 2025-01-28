@@ -23,7 +23,7 @@ Here's an example for adding the middleware to a Rails app in `config/initialize
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :kit_oauth2, client_id: ENV.fetch("KIT_CLIENT_ID"),
-                        client_secret: ENV.fetch("KIT_CLIENT_SECRET"),
+                        client_secret: ENV.fetch("KIT_CLIENT_SECRET")
 end
 ```
 
