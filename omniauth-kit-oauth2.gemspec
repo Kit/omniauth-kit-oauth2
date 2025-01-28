@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "omniauth", "~> 2.1"
   spec.add_runtime_dependency "omniauth-oauth2", "~> 1.8"
+
   spec.add_development_dependency "debug", "~> 1.10"
   spec.add_development_dependency "rspec", "~> 3.13"
 end
