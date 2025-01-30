@@ -63,3 +63,8 @@ Here's an example of an authentication hash available in the callback by accessi
   }
 }
 ```
+
+## Publishing
+
+New versions are automatically published on push to main if
+lib/omniauth/kit_oauth2/version.rb is bumped.
