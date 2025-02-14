@@ -1,0 +1,34 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3.6
+          bundler-cache: true
+
+      - name: Set RubyGems credentials
+        run: |
+          mkdir ~/.gem
+          echo ":rubygems_api_key: ${{secrets.RUBY_GEMS_KEY}}" > ~/.gem/credentials
+          chmod 0600 ~/.gem/credentials
+
+      - name: Set Git author
+        run: |
+          git config user.email "engineering@kit.com"
+          git config user.name "Kit Engineering"
+
+      - name: Publish version
+        run: |
+          bundle exec rake build
+          bundle exec rake release
