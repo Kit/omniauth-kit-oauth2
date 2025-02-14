@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = Omniauth::Kit::Oauth2::VERSION
   spec.authors     = [ "Kit" ]
   spec.email       = [ "engineering@kit.com" ]
-  spec.homepage    = "https://kit.com"
+  spec.homepage    = "https://developers.kit.com"
   spec.summary     = "Allows authenticating with Kit V4 API."
 
   spec.metadata["homepage_uri"] = spec.homepage
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/Kit/omniauth-kit-oauth2/"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
-    Dir["{app,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+    Dir["{lib}/**/*", "LICENSE", "Rakefile", "README.md"]
   end
 
   spec.add_runtime_dependency "omniauth", "~> 2.1"
