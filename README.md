@@ -66,5 +66,16 @@ Here's an example of an authentication hash available in the callback by accessi
 
 ## Publishing
 
-New versions are automatically published on push to main if
-lib/omniauth/kit_oauth2/version.rb is bumped.
+New versions can be published using [the "Publish" GitHub
+Action](https://github.com/Kit/omniauth-kit-oauth2/actions/workflows/publish.yml).
+
+First you'll need to [update the
+version.rb](https://github.com/Kit/omniauth-kit-oauth2/blob/main/lib/omniauth/kit_oauth2/version.rb),
+then manually trigger in the UI via the "Run workflow" button.
+
+![](docs/publish-action.png)
+
+This will:
+- Build the package
+- Push up a Git tag
+- Push the package to RubyGems
